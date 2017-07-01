@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>食品追溯系统</title>
+<script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="nk-container">
+	<!--顶部容器-->
+	<div class="nowcoder-header">
+		<!--导航-->
+		<div class="header-main">
+		    <a class="nowcoder-logo" href="" title="食品追溯网"></a>
+			<ul class="nowcoder-navbar">
+				<li class="active">
+				<a href="index.html">首页</a>
+				</li>
+				<li>
+				<a href="newlist.html" >食品资讯</a>
+				</li>
+				<li>
+				<a href="bg-list.html" >曝光资讯</a>
+				</li>
+				<li>
+				<a href="hy-list.html">行业动态</a>
+				</li>
+				<li>
+				<a href="zc-list.html">政策法规</a>
+				</li>
+				<li>
+				<a href="tz-list.html" >通知公告</a>
+				</li>
+			</ul>
+			<!--搜索框-->
+			<div class="nav-account-search">
+				<form>
+					<input type="text" name="search"  placeholder="搜索" >
+					<input type="image" src="img/search.png"  />
+				</form>
+			</div>
+			<!--搜索框end-->
+			<!--登陆注册-->
+			<div class="nav-account" >
+				<a href="login.html" class="nav-account-login" id="nav-login" name="login">登录</a>|
+				<a  href="register.html" class="nav-account-reg"  id="nav-re" name="register">注册</a>
+			</div>
+			<!--登陆注册end-->
+			<!--个人中心-->
+			<div  class="menu" style="display: none;">
+				<div class="menu_header" >
+				 <img src="img/timg.jpg" width="40px" height="40px" style="border-radius: 40px;"/>
+	             <div class="menu_body" style="display: none" >
+	             	<ul>
+	             		<li><a href="#"><i class="message"></i>消息通知&nbsp;&nbsp;<span>2</span></a></li>
+	             		<li><a href="#"><i class="exit"></i>退出登录</a></li>
+	             	</ul>
+	             </div>
+       			</div>
+			</div>
+			<!--个人中心end-->
+		</div>
+		<!--导航end-->
+	</div>
+	<!--顶部end-->
+	<!--中间内容区域-->
+    <div class="nk-main ">
+		<!--banner轮播区域-->
+		<div class="swap">
+			<ul id="slider">
+				<li     id="myicloud" style="background:#d4e9e4">
+					<div class="img">
+						<img src="img/banner1.jpg">
+					</div>
+				</li>
+				<li >
+					<div class="img" style="background:#197d5c">
+						<img src="img/banner2.jpg">
+					</div>
+				</li>
+				<li >
+					<div class="img" style="background:#cbf3fc">
+						<img src="img/banner3.jpg">
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--banner轮播区域end-->
+		<!--圆形焦点-->
+		<ul id="naviSlider">
+			<li sindex="1" class="on"></li>
+			<li sindex="2"></li>
+			<li sindex="3"></li>
+		</ul>
+		<!--圆形焦点end-->
+		<!--4个入口按钮-->
+		<div class="home-theme-wrapper">
+		<div class="home-theme-box clearfix" >
+			<!--学校平台-->
+			<a href="sc_login.html">
+			<div class="home-theme-item home-theme1" >
+				<div class="hti-sign"></div>
+					<h2 class="hti-depict">学校平台</h2>
+					<h4 class="hti-slogan">追溯问题根源，保证食品安全</h4>
+			</div>
+			</a>
+			<!--政府平台-->
+			<a href="index.html">
+			<div class="home-theme-item home-theme2">
+				<div class="hti-sign"></div>
+					<h2 class="hti-depict">政府监管</h2>
+					<h4 class="hti-slogan">监管各个环节，发现问题</h4>
+			</div>
+			</a>
+			<!--生产企业平台-->
+			<a href="factory-login.html">
+				<div class="home-theme-item home-theme3">
+				<div class="hti-sign"></div>
+					<h2 class="hti-depict">生产企业经营</h2>
+					<h4 class="hti-slogan">优质生产，刻不容缓</h4>
+				</div>
+			</a>
+			<!--投诉平台-->
+			<a href="complain.html">
+				<div class="home-theme-item home-theme4">
+				<div class="hti-sign"></div>
+					<h2 class="hti-depict">投诉入口</h2>
+					<h4 class="hti-slogan">公众用户投诉反馈信息</h4>
+				</div>
+			</a>
+		</div>
+		</div>
+		<!--4个入口按钮end-->
+		<!--追溯码查询-->
+		<div class="list-bg2">
+			<img src="img/sec-img-6.png" class="left-bg-img">
+			<img src="img/sec-img-5.png" class="right-bg-img">
+			<img src="img/zhuisuma_font.png">
+			<div>
+				<form name="zscx">
+					<div style="width: 480px;margin:auto;height: 100px;margin-top:40px">
+						<div style="position: relative">
+							<input type="text" placeholder="请输入追溯码..." class="input-text" id="input-text"><br>
+							<span style="position: absolute;top: 60px;left: 0;">示例：2017-0304-999-010101</span>
+							<button type="submit" placeholder="请输入追溯码..." class="btn-sub" >
+								查询
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!--追溯码查询end-->
+		<!--食品资讯-->
+		<div class="list-bg1">
+				<!--&lt;!&ndash;两片叶子&ndash;&gt;-->
+				<!--<div style="position: absolute;z-index: 20;left: 0%;top: 40%"">-->
+				<!--<img src="img/sec-img-1.png">-->
+				<!--</div>-->
+				<!--<div style="position:absolute;z-index: 20;left: 95%;top: 40%">-->
+					<!--<img src="img/sec-img-2.png">-->
+				<!--</div>-->
+			<!--&lt;!&ndash;两片叶子end&ndash;&gt;-->
+			<div class="list3">
+				<div class="list3-content">
+					<h2>食品资讯</h2>
+					<div class="line"></div>
+					<div class="round"></div>
+					<div class="new-list1">
+						<img src="img/20170511141738.png">
+						<img src="img/20170511141738.png">
+					</div>
+					<div class="new-list2">
+						<ul>
+							<li>
+								<div class="fleft">
+									<span>11-01</span>
+									<p>2016</p>
+								</div>
+								<div class="fleft">
+									<h3><a href="list-content.html">湖北3批次食品不合格，蜂蜜检出氯霉素</a></h3>
+								</div>
+							</li>
+							<li>
+								<div class="fleft">
+									<span>11-01</span>
+									<p>2016</p>
+								</div>
+								<div class="fleft">
+									<h3><a href="list-content.html">湖北3批次食品不合格，蜂蜜检出氯霉素</a></h3>
+								</div>
+							</li>
+							<li>
+								<div class="fleft">
+									<span>11-01</span>
+									<p>2016</p>
+								</div>
+								<div class="fleft">
+									<h3><a href="list-content.html">湖北3批次食品不合格，蜂蜜检出氯霉素</a></h3>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="more">
+						<a href="newlist.html">查看更多</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--食品资讯end-->
+		<!--4个模块-->
+		<div class="list-bg3">
+			<div class="w960">
+			<!--曝光资讯-->
+			<div class="bg w200">
+				<h2 class="h2">曝光资讯</h2>
+				<a href="bg-list.html "class="morea">更多>></a>
+				<ul>
+					<li><a href="">韶关市查获涉嫌走私的鱼翅、鱼肚、开心果、榛子总量高达约77吨</a></li>
+					<li><a href="">韶关市查获涉嫌走私的鱼翅、鱼肚、开心果、榛子总量高达约77吨</a></li>
+					<li><a href="">韶关市查获涉嫌走私的鱼翅、鱼肚、开心果、榛子总量高达约77吨</a></li>
+					<li><a href="">韶关市查获涉嫌走私的鱼翅、鱼肚、开心果、榛子总量高达约77吨</a></li>
+				</ul>
+			</div>
+			<!--曝光资讯end-->
+			<!--行业动态-->
+			<div class="hy w200">
+				<h2 class="h2">行业动态</h2>
+				<span class="morea"><a href="hy-list.html">更多>></a></span>
+				<ul>
+					<li><a href="">韶关市查获涉嫌走私的鱼翅、鱼肚、开心果、榛子总量高达约77吨</a></li>
+					<li><a href="">韶关市查获涉嫌走私的鱼翅、鱼肚、开心果、榛子总量高达约77吨</a></li>
+					<li><a href="">韶关市查获涉嫌走私的鱼翅、鱼肚、开心果、榛子总量高达约77吨</a></li>
+					<li><a href="">韶关市查获涉嫌走私的鱼翅、鱼肚、开心果、榛子总量高达约77吨</a></li>
+				</ul>
+			</div>
+			<!--行业动态end-->
+			</div>
+			<!--&lt;!&ndash;向前向后按钮&ndash;&gt;-->
+			<!--<div class="pn">-->
+            <!--<div><a>&lt;</a>&nbsp;&nbsp;<a>&gt;</a></div>-->
+			<!--</div>-->
+			<!--&lt;!&ndash;向前向后按钮end&ndash;&gt;-->
+			<div class="w960" >
+			<!--通知公告-->
+			<div class="tz w200">
+				<h2 class="h2">政策法规</h2>
+				<span class="morea"><a href="zc-list.html">更多>></a></span>
+				<ul>
+					<li><a href="">韶关市查获涉嫌走私的鱼翅、鱼肚、开心果、榛子总量高达约77吨</a></li>
+					<li><a href="">韶关市查获涉嫌走私的鱼翅、鱼肚、开心果、榛子总量高达约77吨</a></li>
+					<li><a href="">韶关市查获涉嫌走私的鱼翅、鱼肚、开心果、榛子总量高达约77吨</a></li>
+					<li><a href="">韶关市查获涉嫌走私的鱼翅、鱼肚、开心果、榛子总量高达约77吨</a></li>
+				</ul>
+			</div>
+			<!--通知公告end-->
+			<!--政策法规-->
+			<div class="zc w200">
+				<h2 class="h2">通知公告</h2>
+				<span class="morea"><a href="tz-list.html">更多>></a></span>
+				<ul>
+					<li><a href="">韶关市查获涉嫌走私的鱼翅、鱼肚、开心果、榛子总量高达约77吨</a></li>
+					<li><a href="">韶关市查获涉嫌走私的鱼翅、鱼肚、开心果、榛子总量高达约77吨</a></li>
+					<li><a href="">韶关市查获涉嫌走私的鱼翅、鱼肚、开心果、榛子总量高达约77吨</a></li>
+					<li><a href="">韶关市查获涉嫌走私的鱼翅、鱼肚、开心果、榛子总量高达约77吨</a></li>
+				</ul>
+			</div>
+			<!--政策法规-->
+			</div>
+		</div>
+		<!--4个模块end-->
+		<!--蔬果推荐-->
+		<div class="list-bg">
+			<div class="list3">
+					<div class="d_tit">
+						<img src="img/icon-1.png">
+						<h2 style="text-align: center"><a>更多蔬果推荐</a></h2>
+					</div>
+				<div class="tabs-box">
+					<a href="">
+					<div class="item">
+						<div class="product-box">
+							<a href="re_food_content.html">
+							<div class="product-media">
+								<img class="prod-img" alt="" src="img/2.png" />
+								<img class="shape" alt="" src="img/shap-small.png" />
+							</div>
+							<div class="product-caption">
+								<h3 class="product-title">
+									<a href="re_food_content.html"> <span class="light-font">卷心菜  </span>  <strong></strong></a>
+								</h3>
+							</div>
+							</a>
+						</div>
+					</div>
+					</a>
+					<a href="">
+					<div class="item">
+						<div class="product-box">
+							<a href="re_food_content.html">
+							<div class="product-media">
+								<img class="prod-img" alt="" src="img/1.png" />
+								<img class="shape" alt="" src="img/shap-small.png" />
+
+							</div>
+							<div class="product-caption">
+								<h3 class="product-title">
+									<a href="re_food_content.html"> <span class="light-font"> 卷心菜 </span>  </a>
+								</h3>
+							</div>
+							</a>
+						</div>
+					</div>
+					</a>
+					<a href="">
+					<div class="item">
+						<div class="product-box">
+							<a href="re_food_content.html">
+							<div class="product-media">
+								<img class="prod-img" alt="" src="img/3.png" />
+								<img class="shape" alt="" src="img/shap-small.png" />
+
+							</div>
+							<div class="product-caption">
+								<h3 class="product-title">
+									 <span class="light-font"> 番茄 </span>
+								</h3>
+							</div>
+							</a>
+						</div>
+					</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--蔬果推荐end-->
+	</div>
+	<!--页脚-->
+	<div class="footer">
+		<div class="footer-content">
+			<div class="id1">
+			</div>
+            <h2>友情链接</h2>
+			<div class="id2">
+			</div>
+		</div>
+        <ul class="foot-link">
+            <li class="foot-pic">
+                <a href=""><img src="img/link6.png"/></a>
+            </li>
+            <li class="foot-pic">
+                <a href=""><img src="img/link5.png"/></a>
+            </li>
+            <li class="foot-pic">
+                <a href=""><img src="img/link4.png"/></a>
+            </li>
+            <li class="foot-pic">
+                <a href=""><img src="img/link3.png"/></a>
+            </li>
+            <li class="foot-pic">
+                <a href=""><img src="img/link2.png"/></a>
+            </li>
+        </ul>
+        <div class="bg-bottom">
+            <img src="img/white-pattern.png">
+        </div>
+        <div class="bg-bottom1">
+            <img src="img/top.png" class="top">
+		</div>
+		<div style="height: 80px;background-color: #EEEEEE;margin-top:190px;">
+			<p style="position: absolute;left: 20%;padding-top: 20px">Copyright © 2017.Company name All rights reserved.</p>
+			<p style="position: absolute;left:60%;padding-top: 20px">contact us term of use site map privacy policy</p>
+		</div>
+	</div>
+</div>
+<!--主体内容结束-->
+<script type="text/javascript" src="js/jquery.min.js" ></script>
+<!--轮播图插件-->
+<script src="js/jquery.jslider.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#slider").jSlider({
+					pause:3000,
+					naviSlider:'naviSlider'
+				}
+		);
+
+	})
+</script>
+<!--轮播图插件end-->
+<script type="text/javascript">
+	$(document).ready(function() {
+	$("#tab li").click(function() {
+		var index = $(this).index();
+		$(this).addClass('s_tab_cur').siblings().removeClass('s_tab_cur');
+		$('.s_con .s_input').hide().eq(index).show();
+	});
+		<!--顶部头像jquery控制-->
+	$(".menu_header").mouseover(function() {
+	$('.menu_body').show();
+
+	})
+	$(".menu_header").mouseout(function() {
+	$('.menu_body').hide();
+		})
+//		<!--顶部头像jquery控制end-->
+
+// 回到顶部的功能
+        $('.top').on('click',function(){
+            $(window).scrollTop(0);  // 设置为0，即回到顶部
+        });
+
+});
+
+</script>
+
+
+
+</body>
+</html>
