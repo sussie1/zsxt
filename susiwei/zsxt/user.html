@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>登陆注册</title>
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="nk-container">
+		<div class="nowcoder-header">
+			<div class="header-main clearfix">
+			<a class="nowcoder-logo" href="index.html" title="食品追溯网"></a>
+			<ul class="nowcoder-navbar">
+				<li class="active">
+				<a href="" class="nav-home">首页</a>
+				</li>
+				<li>
+				<a href="" class="nav-exam">食品资讯</a>
+				</li>
+				<li>
+				<a href="" class="nav-exam">曝光管理</a>
+				</li>
+				<li>
+				<a href="" class="nav-ranking">行业动态</a>
+				</li>
+				<li>
+				<a href="" class="nav-discuss">政策法规</a>
+				</li>
+				<li>
+				<a href="" class="nav-discuss">通知公告</a>
+				</li>
+			</ul>
+			<div class="nav-account-search">
+				<form>
+					<input type="search" name="" required="" placeholder="搜索" >
+				</form>
+			</div>
+			<div class="nav-account">
+			<a href="user.html#log" class="nav-account-login" id="nav-login" name="login">登录</a>|
+			<a  href="user.html#reg" class="nav-account-reg"  id="nav-re" name="register">注册</a>
+			</div>
+			</div>
+	    </div>
+	    <!--登陆注册tab-->
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".tabbed li").click(function(){
+			var index=$(this).index();
+			$(this).addClass('tab-selected').siblings().removeClass('tab-selected');
+			$('.wrapper-content .input-section').hide().eq(index).show();
+			
+		});
+	});
+</script>
+	    <div class="nk-main cleafix">
+	    	<div class="wrapper">
+	    		<div class="tabbed">
+				<ul class="clearfix">
+				<li class="tab-selected"><a href="#"><span class="tab-login"></span>登录</a></li>
+				<li><a href="#"><span class="tab-reg"></span>注册</a></li>
+				</ul>
+				</div>
+				<div class="wrapper-content clearfix">
+					<div class="input-section" id="login">
+						<form name="login">
+							<div class="form-group">
+								<label for="account" class="control-label">账号</label>
+								<div id="" class="control-group">
+								<input id="account" placeholder="请输入邮箱" type="text" required="required" name="account">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="password" class="control-label">密码</label>
+								<div id="" class="control-group">
+								<input id="login-pwd" placeholder="请输入密码" type="password" required="required" name="login-pwd">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="checkcode" class="control-label">验证码</label>
+								<div id="" class="control-group">
+								<input id="checkcode" placeholder="" type="text" required="required" name="check-code" style="width:150px ;">
+								<img src="img/imgcode.jpg"/>
+								</div>
+							</div>
+							<div class="form-group about-pwd">
+								<div class="keep-pwd">
+									<label>
+									<input id="remLoginChk" checked="" type="checkbox"> 记住登录
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-input-login">
+								<a class="btn btn-primary btn-block" href="" id="loginBtn">立即登录</a>
+								<input class="nk-invisible" type="submit">
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="input-section" style="display: none;" id="register">
+						<form id="form1" name="register">
+							<div class="form-group">
+								<label for="truename" class="control-label">真实姓名</label>
+								<div id="" class="control-group">
+								<input id="truename" placeholder="请输入您的姓名" type="text" name="truename">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="idcard" class="control-label">身份证</label>
+								<div id="" class="control-group">
+								<input id="idcard" placeholder="请输入您的身份证" type="text" name="idcard">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="email" class="control-label">邮箱</label>
+								<div id="" class="control-group">
+								<input id="email" placeholder="请输入您的邮箱" type="text" name="email">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="pwd-reg" class="control-label">密码</label>
+								<div id="" class="control-group">
+								<input id="pwd-reg" placeholder="请输入密码" type="password" name="pwd-reg">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="pwd-reg1" class="control-label">确认密码</label>
+								<div id="" class="control-group">
+								<input id="pwd-reg1" placeholder="再次输入密码" type="password" name="pwd-reg1">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-input-login">
+								<a class="btn btn-primary btn-block" href="" id="loginBtn">立即注册</a>
+								<input class="nk-invisible" type="submit">
+								</div>
+							</div>
+						</form>
+                    </div>
+				</div>
+	    	</div>
+	    </div>
+<!--页脚-->
+<footer class="main-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="widget">
+                    <h4 class="title">关于我们</h4>
+                    <div class="content friend-links">
+                        “食品追溯系统”</span>
+			是一个能够连接生产、检验、监管和消费各个环节，让消费者了解符合卫生安全的生产和流通过程，提高消费者放心程度的信息管理系统。
+			
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="widget">
+                    <h4 class="title">友情链接</h4>
+                    <div class="content tag-cloud">
+                       <a href="http://www.safefood.gov.cn/" title="山东省追溯平台 "  target="_blank">山东省追溯平台</a>
+                       <a href="http://www.china-bee.org.cn" title="蜂产品溯源信息管理平台 "  target="_blank">蜂产品溯源信息管理平台 </a>
+                       <a href="http://www.scfoodsafe.cn/" title="四川农产品质量信息追溯平台 "  target="_blank">四川农产品质量信息追溯平台</a>
+                       <a href="http://www.ahbz.gov.cn/" title="安徽省食品安全追溯平台 "  target="_blank">安徽省食品安全追溯平台 </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="widget">
+                    <h4 class="title">联系我们</h4>
+                    <div class="content friend-links">
+                       <address>地址：广东省广州市从化经济区高技术产业园广从南路548号</address> 
+                       <p>电话：020－87818918</p>
+				       <p>传真：87818020</p>
+				       <p>邮编：510990</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+	</div>
+<script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery-validate.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/register.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

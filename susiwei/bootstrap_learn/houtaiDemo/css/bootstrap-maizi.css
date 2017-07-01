@@ -1,0 +1,22 @@
+body{
+     font-family: 'Microsoft YaHei', sans-serif;
+ }
+.page-header{
+    margin-top: 0;
+}
+.page-header h1{
+    margin: 0;
+    font-size: 16px;
+}
+.user{
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-top: none;
+}
+/*footer*/
+/*footer*/
+footer{
+    font-weight: 400;
+    text-align: center;
+    padding:20px ;
+}

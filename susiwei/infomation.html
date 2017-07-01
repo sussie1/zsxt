@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人简历</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+  
+
+        <style type="text/css">
+        /*基本样式*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: "Microsoft YaHei UI";
+            line-height: 24px;
+            background-color: #f3f3f3;
+            color: #444;
+            height: 100%;
+            width: auto;
+        }
+        #wrapper {
+            max-width: 700px;
+            margin: 40px auto 30px;
+            padding: 60px;
+            background: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,.1);
+            position: relative;
+        }
+        ul {
+            margin: 0 0 0 15px;
+            position: relative;
+        }
+        li {
+            margin: 0 0 5px 0;
+            font-size: 13px;
+        }
+        p {
+            text-align: justify;
+            font-size: 13px;
+        }
+        .clear {
+            clear: both;
+        }
+        a {
+            color: #444;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: normal;
+        }
+        h3 {
+            font-weight: bold;
+            font-size: 14px
+        }
+        h2.sectionHead{
+            clear: both;
+            font-weight: bold;
+            margin: 60px -60px;
+            border-left: 52px solid #444;
+            color: #444;
+            padding: 1px 0 0 8px;
+            position: relative;
+        }
+        h2.sectionHead:before {
+            content: "";
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            left: -105px;
+            top: -15px;
+            background-image: url("image/icons.png");
+        }
+        /*图标*/
+        h2#titleName {
+            margin: 20px -60px 10px;
+        }
+        h2#ribbon:before {
+            background-position: left -45px;
+        }
+        h2#tools:before {
+            background-position: left top;
+        }
+        h2#learn:before {
+            background-position: right top;
+        }
+        h2#clock:before {
+            background-position: -45px top;
+        }
+        h2#titleName:before {
+            background-position: -90px bottom;
+        }
+        /*个人简介*/
+        #bio {
+            position: relative;
+        }
+        #bio #avatar {
+            float: left; margin: 0 20px 0 0;
+        }
+        #bio h2 {
+            font-size: 15px;
+        }
+        #bio p {
+            clear: left;
+            margin:40px auto;
+            padding:40px 45px;
+            max-width: 560px;
+            background: #fbfbfb;
+            border: 1px solid #f3f3f3;
+            border-radius: 8px;
+            position: relative;
+            border-width: 0 1px 1px;
+            border-color: #fff #f3f3f3 #e8e8e8;
+            line-height: 1.6em;
+        }
+        #honorsAwards li {
+            padding-left: 5px;
+            margin-bottom: 8px;
+        }
+        ul#skills,ul#program,ul#schools,ul#recommends,ul#seenOn {
+            margin: 0;
+            list-style: none;
+        }
+        ul#skills,
+        ul#program li,
+        ul#schools li,
+        ul#recommends li {
+            margin: 0 0 20px 0;
+            clear: both;
+        }
+        ul#skills .details,ul#skills .details,ul#program li .details,ul#schools li .details,ul#recommends li .details {
+            float: left;
+            width: 40%;
+            margin-bottom:25px;
+        }
+        ul#program li p,ul#skills li > p,ul#schools li > p,ul#recommends li > p {
+            float: right;
+            width: 57%;
+            margin-bottom: 25px;
+        }
+        .details h5 {
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <!--个人简历-->
+    <h2 id="titleName" class="sectionHead">苏思维</h2>
+    <div id="bio">
+        <h2>面试岗位：web前端工程师/网页设计师</h2>
+        <p>我叫苏思维，今年23岁了，就读于广州大学华软软件学院的大三学生，主修网络工程（网络传播与商务网站设计），
+            熟悉html5，css3，
+            熟悉photoshop，  Illustrator
+        </p>
+    </div>
+    <div class="clear"></div>
+    <!--个人技能-->
+    <h2 id="tools" class="sectionHead">个人技能</h2>
+        <ul id="skills">
+            <li>
+                <div class="details">
+                    <h3>HTML5+CSS3</h3>
+                </div>
+                <p>熟练使用</p>
+            </li>
+            <li>
+                <div class="details">
+                    <h3>Javascript</h3>
+                </div>
+                <p>熟练使用</p>
+            </li>
+            <li>
+                <div class="details">
+                    <h3>jQ</h3>
+                </div>
+                <p>熟练使用</p>
+            </li>
+            <li>
+            <div class="details">
+                <h3>vue</h3>
+            </div>
+            <p>了解</p>
+           </li>
+            <li>
+                <div class="details">
+                    <h3>bootstrap</h3>
+                </div>
+                <p>掌握</p>
+            </li>
+        </ul>
+    <div class="clear"></div>
+    <!--项目经验-->
+    <h2 id="clock" class="sectionHead">项目经验</h2>
+    <ul id="program">
+        <li>
+            <div class="details">
+                <h3>通过选拔参与“互联网商务应用开发特训班”实训网站前端制作</h3>
+                <h5>2016.08-2017.05</h5>
+            </div>
+            <p>利用html/css/javascript等各种web技术进行客户端产品的开发。完成客户端程序的开发</p>
+        </li>
+        <li>
+            <div class="details">
+                <h3>食品追溯系统前端制作</h3>
+                <h5>2017.04-2017.05</h5>
+            </div>
+            <p>利用html/css/javascript等各种web技术进行客户端产品的开发。完成客户端程序的开发并负责文档撰写</p>
+        </li>
+        <li>
+            <div class="details">
+                <h3>攀登计划项目ui设计+前端设计</h3>
+            </div>
+            <p>用phtoshop等作图工具，完成ui设计</p>
+        </li>
+    </ul>
+    <div class="clear"></div>
+    <!--教育背景-->
+    <h2 id="learn" class="sectionHead">教育背景</h2>
+    <ul id="schools">
+        <li>
+            <div class="details">
+                <h3>广州大学华软软件学院</h3>
+                <h4>网络工程（网络传播与商务网站设计）</h4>
+                <h5>2014.09-2018.06</h5>
+            </div>
+            <p>主要学习高等数学、html5程序设计、数据结构等课程，
+              div+css布局，php编程，mysql数据库,计算机原理，linux操作系统</p>
+        </li>
+    </ul>
+    <div class="clear"></div>
+    <!--获得-荣誉-->
+    <h2 id="ribbon" class="sectionHead">获得荣誉</h2>
+    <ul id="honorsAwards">
+        <li>cet-4英语四级</li>
+        <li>2017/5 高校联合DI科技创新大赛二等奖 </li>
+        <li>2017/4 攀登计划一般项目立项省赛 </li>
+        <li>2014-2015年 学生奖学金二等奖</li>
+            <li>2015-2016年  学生奖学金一等奖</li>
+        <li>2015-2016年度国家励志奖学金</li>
+
+    </ul>
+    <div class="clear"></div>
+</div>
+</body>
+</html>
