@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=emulateIE7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>搜索引擎页面</title>
+<style>
+
+@charset "utf-8";
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td , i{
+	margin:0;
+	padding:0;
+	border:0;
+	font-weight:inherit;
+	font-style:inherit;
+	font-size:100%;
+	font-family:inherit;
+	vertical-align:baseline;
+}
+body {line-height:1.5;}
+table {border-collapse: collapse;border-spacing:0;}
+caption, th, td ,b,strong{text-align:left;font-weight:normal;}
+table, td, th {vertical-align:middle;}	
+blockquote:before, blockquote:after, q:before, q:after {content:"";}
+blockquote, q {quotes:"" "";}
+a img {border:none;}
+em,cite{font-style:normal;}
+
+
+body { background:#fff; font: 12px/1.5 Tahoma,'宋体';color:#000;}
+h1, h2, h3, h4, h5, h6 {font-weight:normal;color:#111;}
+a {text-decoration:none;cursor:pointer;}
+dl, dt, dd, ol, ul, li{ list-style:none;}
+
+
+.left{float:left;}
+.right{float:right;}
+
+
+.ue-clear:after{content: ".";display:block;height:0;clear:both;visibility:hidden;}
+.ue-clear{display:inline-block;}
+*html .ue-clear{height:1%;}
+.ue-clear{display:block;}
+
+a{color:#0080cc;}
+a:hover{color:#267A01;text-decoration:underline;}
+
+/*logo样式*/
+.logo{width:160px;height:47px;padding:0 5px;background: url(../img/logo1.png) no-repeat center center #fff;}
+
+/*choose样式*/
+.choose{float:left;margin-right:15px;white-space:nowrap;}
+.choose .text{float:left;padding-left:20px;*padding-left:16px;white-space:nowrap; vertical-align:text-bottom;}
+.choose input[type=radio],.choose input[type=checkbox]{position:relative;*top:-3px;float:left;margin-right:-16px;}
+
+.pagination{font-size:14px;}
+.pagination a {text-decoration: none;border: solid 1px;	}
+.pagination .pxofy{float:left;margin-left: 5px;height:25px;*padding-top:1px;}	
+.pagination a, .pagination span {display: block;float: left;height:18px;line-height:18px;padding:0 6px;margin-right: 5px;font-family:Arial, Helvetica, sans-serif !important;}
+.pagination .current {cursor:default;border: solid 1px ;}
+.pagination .prev, .pagination .next{*line-height:22px;}
+
+/*分页样式*/
+.pagination a{color: #032F54;border-color:#8EB2D2;}
+.pagination a:hover{color:#023054;border-color:#8EB2D2;background:#B8DFFB;}
+.pagination .current{color:#fff;border-color:#5c9bc4;background:#89B8D8;}
+.pagination .current.prev, .pagination .current.next{color:#B9B9B9;border-color:#D3D3D3;background:#fff;}
+.pagination .pxofy{color: #023054;}
+
+#foot{height:32px;line-height:32px; text-align:center;background:#f9f9f9;border-top:1px solid #e0e0e0;color:#ababab;}
+
+
+
+html{*overflow:auto;}
+#hd{padding:20px 10px;}
+#bd{margin-bottom:40px;}
+.logo{float:left;margin-right:30px; height:33px;}
+/*input搜索区域*/
+.inputArea{float:left;position:relative;}
+.inputArea .searchInput{border:1px solid #bfbfbf;padding:0 15px;outline:none;height:35px;*line-height:35px;width:350px; background:url(../img/inputbg.png);font-size:14px;}
+.inputArea .searchButton{position:absolute;left:382px;top:0;*top:1px;*left:381px;width:106px;height:38px;background:url("img/se.png") no-repeat;border:none;cursor:pointer;}
+
+/*返回高级搜索*/
+.inputArea .advanced{position:absolute;font-size:14px;left:500px;top:12px;width:60px;text-decoration:underline;}
+
+/*分界区域，导航*/
+.searchList{float:left;padding-left:5px;}
+.searchList .searchItem{float:left;margin-right:15px;font-size:14px;padding:0 3px 2px 3px;cursor:pointer;height:26px; line-height:26px;}
+.searchList .searchItem.current{color:#0080cc;border-bottom:3px solid #9cc813;font-weight:bold;}
+.nav .tips{color:#969696;font-size:12px;line-height:24px;*line-height:26px;}
+#container.sideBarHide .nav{padding-left:35px;}
+
+/*#main区域样式*/
+#main{padding:0 215px 0 182px;}
+#main.sideBarHide{padding-left:10px;}
+/*侧边栏搜索条件*/
+.sideBar{position:relative;float:left;margin-left:-182px;width:182px;}
+.sideBar .subfieldContext{margin-bottom:20px;padding-left:25px;}
+.sideBar .subfieldContext li{margin-bottom:5px;cursor:pointer;}
+.sideBar .subfieldContext input[type=text]{width:75px;}
+.sideBar .unit{color:#787878;}
+
+/*更多按钮*/
+.sideBar .more a:hover{text-decoration:none;}
+.sideBar .more .moreIcon{display:inline-block;position:relative;top:-1px;*top:-3px;left:2px;*left:-1px;width:9px;height:5px;background:url(../img/more.png);}
+.sideBar .more.show .moreIcon{background:url(../img/down.png);top:-2px;}
+
+.sideBar .reset{padding-left:25px;}
+/*siderBar区域显隐控制*/
+.sideBar .sideBarShowHide{position:absolute;right:0px;top:20px;height:177px;width:1px; background:url(../img/line.png) right;}
+.sideBar .sideBarShowHide a{position:absolute;top:70px;left:-11px;display:inline-block;width:12px;height:31px;background:url(../img/lr.png);}
+
+.sideBar .sideBarShowHide a:hover{background-position:0 -31px;}
+
+/*左侧收起样式*/
+#main.sideBarHide .sideBar{margin-left:-191px;*margin-left:-182px;}
+#main.sideBarHide .sideBar .sideBarShowHide{-moz-transform:rotate(180deg); -o-transform:rotate(180deg); -webkit-transform:rotate(180deg); transform:rotate(180deg);}
+#main.sideBarHide .sideBar .sideBarShowHide a{*background:url(../img/ll.png);}
+#main.sideBarHide .sideBar .sideBarShowHide a:hover{*background-position:0 -31px;}
+#main.sideBarHide .sideBar .sideBarShowHide{background:none;}
+
+.resultArea{float:left;width:100%;}
+.resultArea .resultTotal{position:relative;padding-left:30px;margin-bottom:20px;}
+.resultArea .resultTotal .info{color:#9a9a9a;}
+.resultArea .resultTotal .orderOpt{position:absolute;right:50px;}
+.resultArea .resultTotal .orderOpt a{margin-right:10px;color:#0080cc;}
+
+/*搜索结果列表区域*/
+.resultArea .resultList{padding-left:30px;}
+.resultArea .resultList .resultItem{margin-bottom:20px;}
+.resultArea .resultList .resultItem{margin-bottom:30px;}
+.resultArea .resultList .itemHead{margin-bottom:5px;color:#767676;} 
+.resultArea .resultList .itemHead .keyWord{color:#d90909;}
+.resultArea .resultList .itemBody .keyWord{color:#d90909;}
+.resultArea .resultList .itemHead a.title{font-size:16px;color:#0080cc;text-decoration:underline;}
+.resultArea .resultList .itemHead .value{color:#008000;}
+.resultArea .resultList .itemHead .divsion{margin:0 5px;}
+.resultArea .resultList .itemHead .fileType{margin-right:10px;}
+
+/*搜索内容主体*/
+.resultArea .resultList .itemBody{margin-bottom:5px;line-height:18px;width:90%;}
+.resultArea .resultList .itemFoot{color:#008000;}
+.resultArea .resultList .itemFoot .info{margin-right:10px;}
+
+.resultArea .pagination{margin-bottom:25px;padding-left:32px;}
+/*相关搜索*/
+.resultArea .dependSearch{margin-bottom:30px;padding-left:32px;font-size:14px;}
+.resultArea .dependSearch h6{float:left;margin-right:15px;font-weight:bold;}
+.resultArea .dependSearch p{margin-bottom:5px;}
+.resultArea .dependSearch a{display:inline-block;margin-right:15px;text-decoration:underline;width:90px; white-space:nowrap; overflow:hidden;text-overflow:ellipsis;}
+.resultArea .searchInResult{padding-left:35px;}
+.resultArea .searchInResult .inResult{position:absolute;right:-190px;top:8px;font-size:14px;text-decoration:underline;}
+.resultArea .searchInResult .searchButton{left:417px;}
+/*历史搜索区域*/
+.historyArea{float:right;margin-right:-212px;width:212px;}
+.historyArea h6{margin-bottom:10px;font-weight:bold;}
+.historyArea .historyList{margin-bottom:20px;}
+.historyArea .historyList li{margin-bottom:5px;}
+
+
+/*左侧分栏区域*/
+.subfield{margin-bottom:5px;font-size:14px;font-weight:bold;padding:2px 0 2px 24px;}
+.subfield:first-child{border-left:4px solid #9cc813;padding-left:20px;}
+
+
+/*立即搜索样式*/
+.subfieldContent .search{margin:45px 0 0 135px;width:130px;height:36px;background:url(../img/btnbg.png); font-weight:bold;border:none;border:1px solid #bfbfbf;line-height:36px;}
+/*联想下拉区域*/
+.inputArea .dataList{display:none;position:absolute;left:0;top:42px;*top:43px;width:550px;padding:5px 0;background:#fff;border:1px solid #bfbfbf;border-top:none;}
+.inputArea .dataList li{padding:2px 15px;font-size:14px;}
+.inputArea .dataList li:hover{background:#f0f0f0;color:#0080cc;font-weight:bold;}
+
+
+
+
+</style>
+
+</head>
+<body>
+<div id="container">
+	<div id="hd" class="ue-clear">
+    	<div class="logo"></div>
+        <div class="inputArea">
+        	<input type="text" class="searchInput" />
+            <input type="button" class="searchButton" />
+            <!--<a class="advanced" href="advanced.html">高级搜索</a>-->
+        </div>
+    </div>
+	<div id="bd" class="ue-clear">
+        <div id="main">
+        	<div class="sideBar">
+            	<div class="subfield">设计分类</div>
+                <ul class="subfieldContext">
+                	<li>
+                    	<span class="name">后台界面</span>
+                        <span class="unit">(9862)</span>
+                    </li>
+                    <li>
+                    	<span class="name">图标</span>
+                        <span class="unit">(485)</span>
+                    </li>
+                    <li>
+                    	<span class="name">自定义</span>
+                        <span class="unit">(1564)</span>
+                    </li>
+                    <li>
+                    	<span class="name">UI设计</span>
+                        <span class="unit">(485)</span>
+                    </li>
+                    <li>
+                    	<span class="name">游戏界面</span>
+                        <span class="unit">(485)</span>
+                    </li>
+                    <li class="more">
+                    	<a href="javascript:;">
+                        	<span class="text">更多</span>
+                        	<i class="moreIcon"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="subfield">发布时间</div>
+                <ul class="subfieldContext">
+                	<li>
+                    	<span class="name">2013年</span>
+                        <span class="unit">(9862)</span>
+                    </li>
+                    <li>
+                    	<span class="name">2012年</span>
+                        <span class="unit">(485)</span>
+                    </li>
+                    <li>
+                    	<span class="name">2011年</span>
+                        <span class="unit">(1564)</span>
+                    </li>
+                    <li>
+                    	<input type="text" />
+                        <span class="divsion">-</span>
+                        <input type="text" />
+                    </li>
+                    <li class="more define">
+                    	<a href="javascript:;">
+                        	<span class="text">自定义</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+
+                <div class="sideBarShowHide">
+                	<a href="javascript:;" class="icon"></a>
+                </div>
+            </div>
+            <div class="resultArea">
+            	<p class="resultTotal">
+                	<span class="info">找到约&nbsp;<span class="totalResult">2,608,495</span>&nbsp;条结果(用时<span class="time">0.36</span>秒)，共约<span class="totalPage">1900</span>页</span>
+                    <span class="orderOpt">
+                    	<a href="javascript:;" class="byTime">按时间排序</a>
+                        <a href="javascript:;" class="byDependence">按相关度排序</a>
+                    </span>
+                </p>
+                <div class="resultList">
+                	<div class="resultItem">
+                    	<div class="itemHead">
+                        	<a href=" "  target="_blank" class="title">Uimaker-专注<span class="keyWord">UI设计</span></a>
+                            <span class="divsion">-</span>
+                            <span class="fileType">
+                            	<span class="label">设计分类：</span>
+                                <span class="value">后台界面</span>
+                            </span>
+                            <span class="dependValue">
+                            	<span class="label">相关度：</span>
+                                <span class="value">91.78%</span>
+                            </span>
+                        </div>
+                        <div class="itemBody">
+                        	UI，我们还为<span class="keyWord">UI设计</span>师提供UI设计教、UI设计素材、ICON、图标设计、手机UI、ui设计师招聘、软件界面设计、后台界面、后台模版等相关内容;很多题目一问出来就知道怎么回答是高EQ 应该从一些具体的事出发 唉。。。 下次我出一个肯定比它好 欧阳筱筱 （何时才能遇见那个命中的克星呢？） 你的分数为28分，恭喜你有高EQ。EQ高的人，在自信心、人际关系、工作表现、婚姻...
+                        </div>
+                        <div class="itemFoot">
+                        	<span class="info">
+                            	<label>设计师：</label>
+                                <span class="value">uimaker</span>
+                            </span>
+                            <span class="info">
+                            	<label>搜索引擎：</label>
+                                <span class="value">百度搜索</span>
+                            </span>
+                            <span class="info">
+                            	<label>发布时间：</label>
+                                <span class="value">2013-12-12 12:12</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="resultItem">
+                    	<div class="itemHead">
+                        	<a href=" "  target="_blank" class="title">学<span class="keyWord">ui设计</span>培训班多少钱-ui培训费用-ui设计培训哪里好</a>
+                            <span class="divsion">-</span>
+                            <span class="fileType">
+                            	<span class="label">设计分类：</span>
+                                <span class="value">UI培训</span>
+                            </span>
+                            <span class="dependValue">
+                            	<span class="label">相关度：</span>
+                                <span class="value">91.78%</span>
+                            </span>
+                        </div>
+                        <div class="itemBody">
+                        	不管这个<span class="keyWord">UI设计</span>洛可可工业设计荣获四项国际顶级设计大奖，多次受到国家领导人接见.服务过三星，诺基亚在内的众多国内外知名企业.是代表中国的世界顶级创新设计集团.TEL:010-6433洛可可工业设计荣获四项国际顶级设计大奖，多次受到国家领导人接见.服务过三星，诺基亚在内的众多国内外知名企业.是代表中国的世界顶级创新设计集团.TEL:010-6433
+                        </div>
+                        <div class="itemFoot">
+                        	<span class="info">
+                            	<label>设计师：</label>
+                                <span class="value">Esion</span>
+                            </span>
+                            <span class="info">
+                            	<label>搜索引擎：</label>
+                                <span class="value">Google</span>
+                            </span>
+                            <span class="info">
+                            	<label>发布时间：</label>
+                                <span class="value">2013-12-12 12:12</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="resultItem">
+                    	<div class="itemHead">
+                        	<a href=" "  target="_blank" class="title"><span class="keyWord">UI设计</span>的微刊|微刊 - 悦读喜欢</a>
+                            <span class="divsion">-</span>
+                            <span class="fileType">
+                            	<span class="label">设计分类：</span>
+                                <span class="value">手机界面</span>
+                            </span>
+                            <span class="dependValue">
+                            	<span class="label">相关度：</span>
+                                <span class="value">91.78%</span>
+                            </span>
+                        </div>
+                        <div class="itemBody">
+                        	2012年7月13日... 移动互联网时代的到来，给我们带来便利的同时，也给众多移动网页<span class="keyWord">UI设计</span>师们提出了更大的挑战，因为相比于传统的电脑屏幕，移动设备幕要小很多，设计师2012年7月13日... 移动互联网时代的到来，给我们带来便利的同时，也给众多移动网页设计师们提出了更大的挑战，因为相比于传统的电脑屏幕，移动设备的屏幕要小很多，设计师...
+                        </div>
+                        <div class="itemFoot">
+                        	<span class="info">
+                            	<label>设计师：</label>
+                                <span class="value">uimaker.com</span>
+                            </span>
+                            <span class="info">
+                            	<label>搜索引擎：</label>
+                                <span class="value">360搜索</span>
+                            </span>
+                            <span class="info">
+                            	<label>发布时间：</label>
+                                <span class="value">2013-12-13 14:50</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="resultItem">
+                    	<div class="itemHead">
+                        	<a href=" "  target="_blank" class="title">非常有用的免费<span class="keyWord">UI设计</span>工具和资源 - 博客园
+</a>
+                            <span class="divsion">-</span>
+                            <span class="fileType">
+                            	<span class="label">设计分类：</span>
+                                <span class="value">游戏UI</span>
+                            </span>
+                            <span class="dependValue">
+                            	<span class="label">相关度：</span>
+                                <span class="value">91.78%</span>
+                            </span>
+                        </div>
+                        <div class="itemBody">
+                        	不管这个<span class="keyWord">UI设计</span>太不正规的 很多题目一问出来就知道怎么回答是高EQ 应该从一些具体的时触 很多题目一问出来就知道怎么回答是高EQ 应该从一些具体的时触发 很多题目一问出来就知道怎么回答是高EQ 应该从一些具体的时触发 很多题目一问出来就知道怎么回答是高EQ 应该从一些具体的时触发 很多题目一问出来就
+                        </div>
+                        <div class="itemFoot">
+                        	<span class="info">
+                            	<label>设计师：</label>
+                                <span class="value">uimaker</span>
+                            </span>
+                            <span class="info">
+                            	<label>搜索引擎：</label>
+                                <span class="value">百度搜索</span>
+                            </span>
+                            <span class="info">
+                            	<label>发布时间：</label>
+                                <span class="value">2013-12-12 12:12</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 分页 -->
+                <div class="pagination ue-clear"></div>
+                <!-- 相关搜索 -->
+                <div class="dependSearch ue-clear">
+                    <h6>相关搜索</h6>
+                    <div class="searchList">
+                        <p>
+                            <a href="javascript:;">UI设计</a>
+                            <a href="javascript:;">UI设计师</a>
+                            <a href="javascript:;">图标设计</a>
+                            <a href="javascript:;">设计师</a>
+                        </p>
+                        <p>
+                            <a href="javascript:;">后台界面</a>
+                            <a href="javascript:;">管理系统界面</a>
+                            <a href="javascript:;">界面欣赏</a>
+                            <a href="javascript:;">交互设计</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <!--结果中搜索-->
+                <div class="inputArea searchInResult">
+                    <input type="text" class="searchInput" />
+                    <input type="button" class="searchButton" />
+                    <a class="inResult" javascript:;>在结果中搜索</a>
+                </div>
+            </div>
+            <div class="historyArea">
+            	<div class="hotSearch">
+                	<h6>热门搜索</h6>
+                    <ul class="historyList">
+                    	<li><a href="javascript:;">UI设计</a></li>
+                        <li><a href="javascript:;">界面设计</a></li>
+                        <li><a href="javascript:;">手机界面</a></li>
+                        <li><a href="javascript:;">交互</a></li>
+                        <li><a href="javascript:;">图标</a></li>
+                        <li><a href="javascript:;">UI素材</a></li>
+                        <li><a href="javascript:;">教程</a></li>
+                    </ul>
+                </div>
+                <div class="mySearch">
+                	<h6>我的搜索</h6>
+                    <ul class="historyList">
+                    	<li><a href="javascript:;">专注界面设计网站</a></li>
+                        <li><a href="javascript:;">用户体验</a></li>
+                        <li><a href="javascript:;">互联网</a></li>
+                        <li><a href="javascript:;">UI设计师</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="foot">版权所有</div>
+</body>
+
+</html>
